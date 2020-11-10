@@ -31,7 +31,18 @@ public class FacultyController {
 		//Add Faculties to the Spring Model
 		theModel.addAttribute("faculties", theFaculties);
 		
-		return "list-faculties";
+		return "faculties/list-faculties";
 		
 	}
+	@GetMapping("/viewAddForm")
+	public String viewAddForm(Model theModel) {
+		
+		//Model attribute for data binding
+		Faculty theFaculty = new Faculty();
+		
+		theModel.addAttribute("faculty", theFaculty);
+		
+		return "faculties/faculty-Form";	
+	}
+	
 }
