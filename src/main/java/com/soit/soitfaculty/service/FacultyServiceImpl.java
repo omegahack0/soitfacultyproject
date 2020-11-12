@@ -32,7 +32,6 @@ public class FacultyServiceImpl implements FacultyService {
 	public Faculty findById(int theId) {
 		// TODO Auto-generated method stub
 		Optional<Faculty> facultyid = facultyRepository.findById(theId);
-		
 		Faculty theFaculty = null;
 		
 		if(facultyid.isPresent()) {
@@ -42,7 +41,6 @@ public class FacultyServiceImpl implements FacultyService {
 			//faculty not found
 			throw new RuntimeException("the FacultyId you've entered is invaled - "+theId);
 		}
-		
 		
 		return theFaculty;
 	}
