@@ -29,7 +29,6 @@ public class FacultyController {
 		//Retrieve faculties from the Database
 		List<Faculty> theFaculties = facultyService.findAll();
 		
-		
 		//Add Faculties to the Spring Model
 		theModel.addAttribute("faculties", theFaculties);
 		
