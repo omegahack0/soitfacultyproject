@@ -28,6 +28,7 @@
 				<th>Last Name</th>
 				<th>Title</th>
 				<th>Email</th>
+				<th>Update Info</th>
 			</tr>
 		</thead>
 
@@ -37,6 +38,14 @@
 				<td th:text="${theFaculty.lastName}" />
 				<td th:text="${theFaculty.Title}" />
 				<td th:text="${theFaculty.email}" />
+				
+				<!-- Update Button -->
+				<td>
+				<a th:href="@{/Faculties/viewUpdateForm(facultyId=${theFaculty.id})}" class="btn btn-danger btn-sm">
+				Update
+				</a>
+				</td>
+				
 			</tr>
 		</tbody>
 	</table>
