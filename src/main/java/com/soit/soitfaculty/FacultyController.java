@@ -66,5 +66,12 @@ public class FacultyController {
 		//Using Redirect to prevent double submission
 		return "redirect:/Faculties/list";
 	}
+	@GetMapping("/delete")
+	public String delete(@RequestParam("facultyId")int theId) {
+		//Fn to remove faculty member
+		facultyService.deleteById(theId);
+		//return to the faculty directory
+		return "redirect:/Faculties/list";
+	}
 	
 }
