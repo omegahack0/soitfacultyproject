@@ -17,7 +17,7 @@ import com.soit.soitfaculty.entity.Faculty;
 import com.soit.soitfaculty.service.FacultyService;
 
 @Controller
-@RequestMapping("/Faculties")
+@RequestMapping("")
 public class FacultyController {
 
 	public FacultyService facultyService;
@@ -27,7 +27,7 @@ public class FacultyController {
 	}
 	
 	//Mapping for "/list"
-	@GetMapping("/list")
+	@GetMapping("/Faculties/list")
 	public String listFaculties(Model theModel) {
 		
 		//Retrieve faculties from the Database
@@ -39,7 +39,7 @@ public class FacultyController {
 		return "faculties/list-faculties";
 		
 	}
-	@GetMapping("/viewAddForm")
+	@GetMapping("/Faculties/viewAddForm")
 	public String viewAddForm(Model theModel) {
 		
 		//Model attribute for data binding
@@ -49,7 +49,7 @@ public class FacultyController {
 		
 		return "faculties/faculty-Form";	
 	}
-	@GetMapping("/viewUpdateForm")
+	@GetMapping("/Faculties/viewUpdateForm")
 	public String viewUpdateForm(@RequestParam("facultyId")int theId,Model theModel) {
 		
 		//Retrieve the faculty info from the service layer
@@ -61,7 +61,7 @@ public class FacultyController {
 		//redirect us to the faculty form
 		return "faculties/faculty-Form";	
 	}
-	@PostMapping("/save")
+	@PostMapping("/Faculties/save")
 	public String saveFaculty(@ModelAttribute("faculty") Faculty theFaculty) {
 		//Register the Faculty member
 		facultyService.save(theFaculty);
@@ -69,13 +69,14 @@ public class FacultyController {
 		//Using Redirect to prevent double submission
 		return "redirect:/Faculties/list";
 	}
-	@GetMapping("/delete")
+	@GetMapping("/Faculties/delete")
 	public String delete(@RequestParam("facultyId")int theId) {
 		//Fn to remove faculty member
 		facultyService.deleteById(theId);
 		//return to the faculty directory
 		return "redirect:/Faculties/list";
-	}    @GetMapping("/GetUserZipcode")
+	}    
+	@GetMapping("/GetUserZipcode")
 	public String zipcodeForm(Model model) {
 		model.addAttribute("UserZipcodeObj", new UserZipcode());
 		//need to add try catch statement to verify user input
