@@ -24,13 +24,11 @@ public class FacultyServiceImpl implements FacultyService {
 	
 	@Override
 	public List<Faculty> findAll() {
-		// TODO Auto-generated method stub
 		return facultyRepository.findAllByOrderByLastNameAsc(); //findAllByOrderByLastNameAcs
 	}
 
 	@Override
 	public Faculty findById(int theId) {
-		// TODO Auto-generated method stub
 		Optional<Faculty> facultyid = facultyRepository.findById(theId);
 		Faculty theFaculty = null;
 		
@@ -47,14 +45,12 @@ public class FacultyServiceImpl implements FacultyService {
 
 	@Override
 	public void save(Faculty theFaculty) {
-		// TODO Auto-generated method stub
 		facultyRepository.save(theFaculty);
 
 	}
 
 	@Override
 	public void deleteById(int theId) {
-		// TODO Auto-generated method stub
 		facultyRepository.deleteById(theId);
 
 	}
