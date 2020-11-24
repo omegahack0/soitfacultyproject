@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Custom Markers</title>
+
+
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#home.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a>
+  </div>
+</div>
+
+  <!--Navbar-->
+
+<!-- Everything from the Google map commented out to test other feature
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfh1oW8ikLP-oVmxmskrqN_PuHaH3-BY4&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+
+      /* Optional: Makes the page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script>
+      let map;
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: new google.maps.LatLng(-33.91722, 151.23064),
+          zoom: 16,
+        });
+        const iconBase =
+          "https://developers.google.com/maps/documentation/javascript/examples/full/images/";
+        const icons = {
+          parking: {
+            icon: iconBase + "parking_lot_maps.png",
+          },
+          library: {
+            icon: iconBase + "library_maps.png",
+          },
+          info: {
+            icon: iconBase + "info-i_maps.png",
+          },
+        };
+        const features = [
+          {
+            position: new google.maps.LatLng(-33.91721, 151.2263),
+            type: "info",
+          },
+          {
+            position: new google.maps.LatLng(-33.91539, 151.2282),
+            type: "info",
+          },
+          {
+            position: new google.maps.LatLng(-33.91747, 151.22912),
+            type: "info",
+          },
+          {
+            position: new google.maps.LatLng(-33.9191, 151.22907),
+            type: "info",
+          },
+          {
+            position: new google.maps.LatLng(-33.91725, 151.23011),
+            type: "info",
+          },
+          {
+            position: new google.maps.LatLng(-33.91872, 151.23089),
+            type: "info",
+          },
+          {
+            position: new google.maps.LatLng(-33.91784, 151.23094),
+            type: "info",
+          },
+          {
+            position: new google.maps.LatLng(-33.91682, 151.23149),
+            type: "info",
+          },
+          {
+            position: new google.maps.LatLng(-33.9179, 151.23463),
+            type: "info",
+          },
+          {
+            position: new google.maps.LatLng(-33.91666, 151.23468),
+            type: "info",
+          },
+          {
+            position: new google.maps.LatLng(-33.916988, 151.23364),
+            type: "info",
+          },
+          {
+            position: new google.maps.LatLng(
+              -33.91662347903106,
+              151.22879464019775
+            ),
+            type: "parking",
+          },
+          {
+            position: new google.maps.LatLng(
+              -33.916365282092855,
+              151.22937399734496
+            ),
+            type: "parking",
+          },
+          {
+            position: new google.maps.LatLng(
+              -33.91665018901448,
+              151.2282474695587
+            ),
+            type: "parking",
+          },
+          {
+            position: new google.maps.LatLng(
+              -33.919543720969806,
+              151.23112279762267
+            ),
+            type: "parking",
+          },
+          {
+            position: new google.maps.LatLng(
+              -33.91608037421864,
+              151.23288232673644
+            ),
+            type: "parking",
+          },
+          {
+            position: new google.maps.LatLng(
+              -33.91851096391805,
+              151.2344058214569
+            ),
+            type: "parking",
+          },
+          {
+            position: new google.maps.LatLng(
+              -33.91818154739766,
+              151.2346203981781
+            ),
+            type: "parking",
+          },
+          {
+            position: new google.maps.LatLng(
+              -33.91727341958453,
+              151.23348314155578
+            ),
+            type: "library",
+          },
+        ];
+
+        // Create markers.
+        for (let i = 0; i < features.length; i++) {
+          const marker = new google.maps.Marker({
+            position: features[i].position,
+            icon: icons[features[i].type].icon,
+            map: map,
+          });
+        }
+      }
+    </script>
+  -->
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+
+</style>
+
+
+  <header class="w3-container w3-red w3-center" style="padding:16px 4px">
+    <h1 class="w3-margin w3-jumbo">Posts</h1>
+    <p class="w3-xlarge"></p>
+    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
+  </header>
+
+
+
+  </head>
+
+
+  <body>
+
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Posts</h1>
+          <!--Facebook integration-->
+          <br>
+    <div class="fb-page" data-href="https://www.facebook.com/Stemmed-Gardens-104081044859459" data-tabs="timeline" data-width="" data-height="" data-small-header="false" 
+    data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Stemmed-Gardens-104081044859459" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Stemmed-Gardens-104081044859459">Stemmed Gardens</a></blockquote></div>
+    
+      
+      <h5 class="w3-padding-32">hi</h5>
+      
+
+      <p class="w3-text-grey">Text can go here</p>
+    </div>
+
+    <div class="w3-third w3-center">
+     
+      
+    </div>
+    
+  </div>
+</div>
+    <div id="fb-root"></div>
+   
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="afwuxLTF"></script>
+
+    <div id="map"></div>
+
+
+
+  </body>
+</html>
