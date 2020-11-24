@@ -1,4 +1,4 @@
-package com.soit.soitfaculty.service;
+package com.soit.Stemmed.service;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

@@ -1,4 +1,4 @@
-package com.soit.soitfaculty.entity;
+package com.soit.Stemmed.entity;
 
 public class UserZipcode {
     public String zipcode;

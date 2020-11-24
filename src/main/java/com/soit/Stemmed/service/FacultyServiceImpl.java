@@ -1,4 +1,4 @@
-package com.soit.soitfaculty.service;
+package com.soit.Stemmed.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.soit.soitfaculty.dao.FacultyRepository;
-import com.soit.soitfaculty.entity.Faculty;
+import com.soit.Stemmed.dao.FacultyRepository;
+import com.soit.Stemmed.entity.Faculty;
 
 @Service
 public class FacultyServiceImpl implements FacultyService {

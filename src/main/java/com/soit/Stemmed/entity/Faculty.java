@@ -1,4 +1,4 @@
-package com.soit.soitfaculty.entity;
+package com.soit.Stemmed.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

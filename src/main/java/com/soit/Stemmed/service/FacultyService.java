@@ -1,8 +1,8 @@
-package com.soit.soitfaculty.service;
+package com.soit.Stemmed.service;
 
 import java.util.List;
 
-import com.soit.soitfaculty.entity.Faculty;
+import com.soit.Stemmed.entity.Faculty;
 
 public interface FacultyService {
 

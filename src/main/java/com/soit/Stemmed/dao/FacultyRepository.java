@@ -1,12 +1,11 @@
-package com.soit.soitfaculty.dao;
+package com.soit.Stemmed.dao;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.soit.soitfaculty.entity.Faculty;
+import com.soit.Stemmed.entity.Faculty;
 
-import com.soit.soitfaculty.entity.*;
 public interface FacultyRepository extends JpaRepository<Faculty, Integer> {
 
 	
