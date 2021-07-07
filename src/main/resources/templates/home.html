@@ -1,0 +1,405 @@
+<html>
+  <!--<xmlns:th>"http://www.thymeleaf.org"</xmlns:th> -->
+<head>
+  <!--Load Css-->
+  <!-- <link type="text/css" href="HomeStyles.css" rel="stylesheet" /> -->
+  <!-- <link href="HomeStyles.css" rel="stylesheet" type="text/css"/> -->
+  <link rel="stylesheet" type="text/css" href="/css/HomeStyles.css">
+  <link rel="stylesheet" type="text/css" href="/css/CalendarCss.css">
+
+  <!-- <link rel = "stylesheet" type = "text/css" href = "HomeStyles.css" /> -->
+  
+    <!-- Load Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>STEMMED GARDENS</title><br><br>
+</head>
+<body>
+
+  <!--Navbar-->
+
+ 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navigation</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="locale">Locale</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Options
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="Calendar.html">Scheduling Activities</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+<!--Header-->
+<header id="header">
+<h1>Welcome to STEMMED GARDENS</h1>
+</header>
+<br> <br> <br> <br> <br>
+<!--
+<nav class= "navbar">
+  <div class="navbar-container">
+    <br><br>
+
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+  </div>
+</nav>
+-->
+
+
+
+
+<!--Navbar & Top of page Css-->
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: "Roboto Condensed", halvectica, sans-serif;
+}
+
+#header{
+    width: 100%;
+    height: 25vh;
+    background-color: #98FB98;
+    position: relative;
+}
+
+h1{
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    letter-spacing: 3px;
+    margin-right: -3px;
+    font-weight:100;
+    text-transform: uppercase;
+    margin: 30px;
+
+}
+/*
+.navbar{
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight:100;
+  height: 6rem;
+  line-height: 6rem;
+}
+
+.navbar-container{
+  width: 70%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+.navbar ul{
+  float: right;
+  list-style: none;
+}
+
+.navbar ul li{
+  display: inline-block;
+  padding: 0 1.5rem;
+  cursor: pointer;
+}
+
+.navbar ul li:hover {
+  background-color: #e05465;
+  color: #fff;
+}
+.fixed{
+  position: fixed;
+  width: 25%;
+}
+*/
+
+</style>
+-->
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  </style>
+
+
+
+  </head>
+  <body>
+  <br><br><br>
+    <!-- Any Descriptive Calendar Text-->
+    <br> <br> <br> <br> <br>
+
+    <!--Embed Google Calendar-->
+
+  <div class="resp-container">
+    <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=bWFhbG9uZ2VAZ21haWwuY29t&amp;src=a2x1MjM5a2hya2Fhc2g3OGVuanUzMTQyNWdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23F6BF26&amp;color=%239E69AF&amp;color=%23009688" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe> 
+  </div>
+    <!--Styling for Calendar Widget-->
+    <style>
+      
+    .resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5%;
+    padding-left: 5px;
+
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    }
+    </style>
+<!--End Calendar Widget code-->
+
+<!--Column Cards for the plant display-->
+  <p>My Plants</p>
+  <p>Display's the plants the user has planted.</p>
+  
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <h3>User Plant 1</h3>
+        <p>---</p>
+        <p>---</p>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <h3>User Plant 2</h3>
+        <p>---</p>
+        <p>---</p>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card">
+        <h3>User Plant 3</h3>
+        <p>---</p>
+        <p>---</p>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card">
+        <h3>User Plant 4</h3>
+        <p>---</p>
+        <p>---</p>
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+
+
+
+
+
+<!-- Navigation -->
+
+
+
+<!-- <h1>Welcome to STEMMED GARDENS!</h1> -->
+<!-- <p>Welcome to <span th:text="${appName}">Our App</span></p> -->
+
+
+
+  <!--Calendar Start-->
+  <!--
+  <br> <br> <br>
+  <div class="calendar">
+    <div class="header">
+      <a href="javascript:void(0)" Title="Previous Month"><i></i></a>
+
+      <div class="text" data-render="month-year"></div>
+
+      <a href="javascript:void(0)" data-action="next-month" title="Next Month"><i></i></a>
+    </div>
+ 
+      <div class="months" data-flow="left">
+
+      <div class="month month-a">
+        <div class="render render-a"></div>
+       </div>
+
+      <div class="month month-b">
+        <div class="render render-b"></div>
+      </div>
+
+    
+    </div>
+
+</div>
+-->
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!--JS for our calendar-->
+<!--
+<script> var Calendar = function(t) {
+  this.divId = t.RenderID ? t.RenderID : '[data-render="calendar"]', this.DaysOfWeek = t.DaysOfWeek ? t.DaysOfWeek : ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], this.Months = t.Months ? t.Months : ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var e = new Date;
+  this.CurrentMonth = e.getMonth(), this.CurrentYear = e.getFullYear();
+  var r = t.Format;
+  this.f = "string" == typeof r ? r.charAt(0).toUpperCase() : "M"
+};
+Calendar.prototype.nextMonth = function() {
+  11 == this.CurrentMonth ? (this.CurrentMonth = 0, this.CurrentYear = this.CurrentYear + 1) : this.CurrentMonth = this.CurrentMonth + 1, this.divId = '[data-active="false"] .render', this.showCurrent()
+}, Calendar.prototype.prevMonth = function() {
+  0 == this.CurrentMonth ? (this.CurrentMonth = 11, this.CurrentYear = this.CurrentYear - 1) : this.CurrentMonth = this.CurrentMonth - 1, this.divId = '[data-active="false"] .render', this.showCurrent()
+}, Calendar.prototype.previousYear = function() {
+  this.CurrentYear = this.CurrentYear - 1, this.showCurrent()
+}, Calendar.prototype.nextYear = function() {
+  this.CurrentYear = this.CurrentYear + 1, this.showCurrent()
+}, Calendar.prototype.showCurrent = function() {
+  this.Calendar(this.CurrentYear, this.CurrentMonth)
+}, Calendar.prototype.checkActive = function() {
+  1 == document.querySelector(".months").getAttribute("class").includes("active") ? document.querySelector(".months").setAttribute("class", "months") : document.querySelector(".months").setAttribute("class", "months active"), "true" == document.querySelector(".month-a").getAttribute("data-active") ? (document.querySelector(".month-a").setAttribute("data-active", !1), document.querySelector(".month-b").setAttribute("data-active", !0)) : (document.querySelector(".month-a").setAttribute("data-active", !0), document.querySelector(".month-b").setAttribute("data-active", !1)), setTimeout(function() {
+      document.querySelector(".calendar .header").setAttribute("class", "header active")
+  }, 200), document.querySelector("body").setAttribute("data-theme", this.Months[document.querySelector('[data-active="true"] .render').getAttribute("data-month")].toLowerCase())
+}, Calendar.prototype.Calendar = function(t, e) {
+  "number" == typeof t && (this.CurrentYear = t), "number" == typeof t && (this.CurrentMonth = e);
+  var r = (new Date).getDate(),
+      n = (new Date).getMonth(),
+      a = (new Date).getFullYear(),
+      o = new Date(t, e, 1).getDay(),
+      i = new Date(t, e + 1, 0).getDate(),
+      u = 0 == e ? new Date(t - 1, 11, 0).getDate() : new Date(t, e, 0).getDate(),
+      s = "<span>" + this.Months[e] + " &nbsp; " + t + "</span>",
+      d = '<div class="table">';
+  d += '<div class="row head">';
+  for (var c = 0; c < 7; c++) d += '<div class="cell">' + this.DaysOfWeek[c] + "</div>";
+  d += "</div>";
+  for (var h, l = dm = "M" == this.f ? 1 : 0 == o ? -5 : 2, v = (c = 0, 0); v < 6; v++) {
+      d += '<div class="row">';
+      for (var m = 0; m < 7; m++) {
+          if ((h = c + dm - o) < 1) d += '<div class="cell disable">' + (u - o + l++) + "</div>";
+          else if (h > i) d += '<div class="cell disable">' + l++ + "</div>";
+          else {
+              d += '<div class="cell' + (r == h && this.CurrentMonth == n && this.CurrentYear == a ? " active" : "") + '"><span>' + h + "</span></div>", l = 1
+          }
+          c % 7 == 6 && h >= i && (v = 10), c++
+      }
+      d += "</div>"
+  }
+  d += "</div>", document.querySelector('[data-render="month-year"]').innerHTML = s, document.querySelector(this.divId).innerHTML = d, document.querySelector(this.divId).setAttribute("data-date", this.Months[e] + " - " + t), document.querySelector(this.divId).setAttribute("data-month", e)
+}, window.onload = function() {
+  var t = new Calendar({
+      RenderID: ".render-a",
+      Format: "M"
+  });
+  t.showCurrent(), t.checkActive();
+  var e = document.querySelectorAll(".header [data-action]");
+  for (i = 0; i < e.length; i++) e[i].onclick = function() {
+      if (document.querySelector(".calendar .header").setAttribute("class", "header"), "true" == document.querySelector(".months").getAttribute("data-loading")) return document.querySelector(".calendar .header").setAttribute("class", "header active"), !1;
+      var e;
+      document.querySelector(".months").setAttribute("data-loading", "true"), this.getAttribute("data-action").includes("prev") ? (t.prevMonth(), e = "left") : (t.nextMonth(), e = "right"), t.checkActive(), document.querySelector(".months").setAttribute("data-flow", e), document.querySelector('.month[data-active="true"]').addEventListener("webkitTransitionEnd", function() {
+          document.querySelector(".months").removeAttribute("data-loading")
+      }), document.querySelector('.month[data-active="true"]').addEventListener("transitionend", function() {
+          document.querySelector(".months").removeAttribute("data-loading")
+      })
+  }
+};</script>
+
+-->
+
+
+<script src="/get.js"></script>
+
+  <!--Begin for card theme, this is how we can have an interactive display for the users plants-->
+
+
+    
+
+
+
+
+
+
+</body>
+<!--Javascript-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ 
+</html>

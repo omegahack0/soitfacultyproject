@@ -1,7 +1,11 @@
-package com.soit.soitfaculty;
+package com.soit.Stemmed;
 
+import java.io.IOException;
 import java.util.List;
 
+import com.soit.Stemmed.entity.UserZipcode;
+import com.soit.Stemmed.service.UsdaInfo;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,8 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.soit.soitfaculty.entity.Faculty;
-import com.soit.soitfaculty.service.FacultyService;
+import com.soit.Stemmed.entity.Faculty;
+import com.soit.Stemmed.service.FacultyService;
 
 @Controller
 @RequestMapping("/Faculties")
@@ -22,7 +26,9 @@ public class FacultyController {
 	public FacultyController (FacultyService theFacultyService) {
 		facultyService = theFacultyService;
 	}
-	
+	@Value("${spring.application.name}")
+	String appName;
+
 	//Mapping for "/list"
 	@GetMapping("/list")
 	public String listFaculties(Model theModel) {
@@ -73,5 +79,37 @@ public class FacultyController {
 		//return to the faculty directory
 		return "redirect:/Faculties/list";
 	}
+	@GetMapping("/")
+	public String homePage(Model model) {
+		model.addAttribute("appName", appName);
+		return "home";
+	}
+	@GetMapping("/GetUserZipcode")
+	public String zipcodeForm(Model model) {
+		model.addAttribute("UserZipcodeObj", new UserZipcode());
+		//need to add try catch statement to verify user input
+		return "getUserZipcode";
+	}
+	@PostMapping("/GetUserZipcode")
+	public String zipcodeSubmit(@ModelAttribute UserZipcode userZip, Model model) throws IOException {
+		String userUSDAZone = UsdaInfo.getUSDAZone(userZip.zipcode);
+		model.addAttribute("UserZipcodeObj", userZip);
+		model.addAttribute("UserUSDAZoneObj", userUSDAZone);//the problem child
+		return "result";
+	}
+	@GetMapping("/locale")
+	public String localPage () {
+		return "locale";
+	}
+	@GetMapping("/calendar")
+	public String calendarPage () {
+		return "calendar";
+	}
+
+	@GetMapping("/social")
+	public String SocialPage(){
+		return "social";
+	}
+
 	
 }
